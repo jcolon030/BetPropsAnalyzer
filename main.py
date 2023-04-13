@@ -29,7 +29,7 @@ class PlayerStats:
         
         print(df_gamelog["MATCHUP"])
         
-        against_log = [df_gamelog[stat][game] for game in range(len(df_gamelog)) if "TOR" == df_gamelog["MATCHUP"][game][-3:]]
+        against_log = [df_gamelog[stat][game] for game in range(len(df_gamelog)) if "NOP" == df_gamelog["MATCHUP"][game][-3:]]
         against_log = against_log[:10]
         
         per_game = [pts for pts in df_gamelog[stat][:10]]
@@ -47,7 +47,7 @@ class PlayerStats:
         
         
         
-p1 = PlayerStats("Alex Caruso")
+p1 = PlayerStats("Shai Gilgeous-Alexander")
 
 print(p1.career_stats)
 
